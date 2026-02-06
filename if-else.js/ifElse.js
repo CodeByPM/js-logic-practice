@@ -265,3 +265,89 @@ else if(attendance<75){
     console.log("not allowed")
 }
 
+
+//🔵 LEVEL 4: Multi-Condition Brain Stretch
+
+// ### Q11️⃣
+
+// A number is given.
+
+// If divisible by 2 AND 3 → `"Divisible by 6"`
+
+// If divisible only by 2 → `"Divisible by 2"`
+
+// If divisible only by 3 → `"Divisible by 3"`
+
+// Else → `"Not divisible"`
+
+let dinum=3;
+if(dinum%2==0&&dinum%3==0){
+    console.log("divisible by 6")
+}
+ else if(dinum%2==0){
+    console.log("divisible by 2")
+ }
+
+ else if(dinum%3==0){
+    console.log("divisible by 3")
+ }
+
+ else{
+    console.log("not divisible")
+ }
+
+//### Q12️⃣
+
+// Login attempt system:
+
+// Inputs: `attempts`
+
+// - attempts = 0 → `"Try again"`
+// - attempts between 1–2 → `"Warning"`
+// - attempts ≥3 → `"Account locked"`
+
+let attempt = 3;
+
+if (attempt==0){
+    console.log("try again")
+}
+
+else if (attempt>=1&&attempt<=2){
+    console.log("warning")
+    // yaha pe maine galti kiya tha || ka use jise 3 bade bhi ho tabhi warning aa raha tha
+}
+
+else if (attempt>=3){
+    console.log("account locket")
+}
+
+// ### Q13️⃣
+
+// Weather advisory:
+
+// Inputs: `temperature`, `isRaining`
+
+// - Temp <15 AND raining → `"Cold & Rainy"`
+// - Temp ≥15 AND raining → `"Warm & Rainy"`
+// - Temp ≥30 AND not raining → `"Hot"`
+// - Else → `"Normal"`
+
+let temperature= 33;
+let isRaining= false;
+if(temperature<15&&isRaining){
+    console.log("cold and rainy")
+}
+
+else if(temperature>=15&&isRaining){
+    console.log("warm and rainy")
+}
+
+else if(temperature>=30&&!isRaining){
+    console.log("hot")
+}
+
+else{
+    
+    console.log("normal")
+}
+
