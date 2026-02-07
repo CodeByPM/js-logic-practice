@@ -321,16 +321,16 @@ else if (attempt>=3){
     console.log("account locket")
 }
 
-// ### Q13️⃣
+// // ### Q13️⃣
 
-// Weather advisory:
+// // Weather advisory:
 
-// Inputs: `temperature`, `isRaining`
+// // Inputs: `temperature`, `isRaining`
 
-// - Temp <15 AND raining → `"Cold & Rainy"`
-// - Temp ≥15 AND raining → `"Warm & Rainy"`
-// - Temp ≥30 AND not raining → `"Hot"`
-// - Else → `"Normal"`
+// // - Temp <15 AND raining → `"Cold & Rainy"`
+// // - Temp ≥15 AND raining → `"Warm & Rainy"`
+// // - Temp ≥30 AND not raining → `"Hot"`
+// // - Else → `"Normal"`
 
 let temperature= 33;
 let isRaining= false;
@@ -351,3 +351,316 @@ else{
     console.log("normal")
 }
 
+
+// 7 feb 2026 
+
+//🟢 PROJECT 1: SMART LOGIN SYSTEM (DIFFERENT HAI)
+// ### Inputs:
+
+// - isLoggedIn (true/false)
+// - loginAttempts (number)
+
+// ### Rules:
+
+// - Not logged in AND attempts ≥3 → `"Account Locked"`
+// - Not logged in AND attempts <3 → `"Try Again"`
+// - Logged in → `"Welcome User"`
+
+// 🧠 Twist:
+
+// Order galat hua → wrong output aayega.
+
+let isLoggin = false;
+let isLogginAttempt = 9;
+
+if(isLoggin){
+    console.log("welcome")
+}
+else if(!isLoggin&&isLogginAttempt<3){
+    console.log("try again")
+}
+
+else if(!isLoggin&&isLogginAttempt>=3){
+    console.log("account blocked")
+}
+
+
+//## 🟢 PROJECT 2: MOBILE BATTERY ALERT (STATE BASED)
+
+// ### Input:
+
+// - batteryPercent
+// - isCharging (true/false)
+
+// ### Rules:
+
+// - battery ≤5 AND not charging → `"Phone will shut down"`
+// - battery ≤20 AND not charging → `"Low battery"`
+// - charging → `"Charging"`
+// - else → `"Battery OK"`
+
+// 🧠 Twist:
+
+// Same battery value, different output based on **state**.
+
+let batteryPercent=78
+let isCharging=false;
+
+if(batteryPercent<=5&&!isCharging){
+    console.log("phone will shut down")
+}
+else if(batteryPercent<=20&&!isCharging){
+    console.log("low battery")
+}
+else if(isCharging){
+    console.log("phone is charging")
+    // yaha pe galti kar diya tha ! use karke matalab battery charge hi nahi ho raha hai 
+}
+else{
+    console.log("battery ok")
+}
+
+// ## 🟡 PROJECT 3: BUS TICKET PRICING (CONFLICTING RULES)
+
+// ### Inputs:
+
+// - age
+// - isStudent (true/false)
+
+// ### Rules:
+
+// - age <5 → `"Free"`
+// - Student (any age) → `"₹50"`
+// - age ≥60 → `"₹40"`
+// - else → `"₹80"`
+
+// 🧠 Twist:
+
+// Student + Senior → kaunsa chalega?
+
+// Tumhe **priority decide karni hogi**.
+
+
+let age = 60;
+
+let IsStudent= false
+
+if(age<5){
+    console.log("free ticket bus for child ")
+}
+else 
+if(age>=60){
+    console.log(" senior citiesen ticket bus 40 rupess ")
+//yaha pe ham  senior cityiesn ko pahale priority denge
+}
+
+else 
+if(IsStudent){
+    console.log("free ticket bus 50 rupess ")
+}
+else{
+    console.log("80 rupess")
+}
+
+
+// ## 🟡 PROJECT 4: EXAM RESULT WITH GRACE MARKS
+
+// ### Input:
+
+// - marks
+
+// ### Rules:
+
+// - marks <30 → `"Fail"`
+// - marks 30–39 → `"Grace Pass"`
+// - marks ≥40 → `"Pass"`
+// - marks >100 or <0 → `"Invalid"`
+
+// 🧠 Twist:
+
+// Grace category adds **extra decision layer**.
+
+let marks = 45;
+if(marks>100||marks<0){
+    console.log("invalid")
+}
+
+else if(marks<30){
+    console.log("fail")
+}
+
+else if(marks>=30&&marks<=39){
+    console.log("grace pass")
+}
+
+else if(marks>=40){
+    console.log("pass")
+}
+
+
+//## 🟡 PROJECT 5: ONLINE ORDER ENGINE (MULTI STATE)
+
+// ### Inputs:
+
+// - cartEmpty (true/false)
+// - paymentDone (true/false)
+// - addressAdded (true/false)
+
+// ### Rules:
+
+// - cart empty → `"Add items to cart"`
+// - cart not empty AND address missing → `"Add address"`
+// - cart not empty AND address added AND payment not done → `"Complete payment"`
+// - all done → `"Order placed"`
+
+// 🧠 Twist:
+
+// 3 inputs → many paths.
+
+let cartEmpty= true;
+let paymentDone = true;
+let addressAdded= true;
+
+if(cartEmpty){
+    console.log("add items to card")
+}
+
+else if(!cartEmpty&&!addressAdded){
+    console.log("add adress")
+}
+
+else if(!cartEmpty&&addressAdded&&!paymentDone){
+    console.log("complete payment")
+}
+else if(!cartEmpty&&addressAdded&&paymentDone){
+    console.log("oder placed")
+}
+
+// //## 🔵 PROJECT 6: GAME LEVEL UNLOCK SYSTEM
+
+// ### Inputs:
+
+// - levelCompleted (number)
+// - hasPremium (true/false)
+
+// ### Rules:
+
+// - levelCompleted <5 → `"Keep playing"`
+// - levelCompleted ≥5 AND not premium → `"Buy premium"`
+// - levelCompleted ≥5 AND premium → `"New level unlocked"`
+
+// 🧠 Twist:
+
+// Same number → different result.
+
+let levelCompleted = 6;
+let hasPremium = true;
+
+if(levelCompleted<5){
+    console.log("keepplaying")
+}
+
+else 
+if(levelCompleted>=5&&!hasPremium){
+    console.log("keepplaying")
+}
+else 
+if(levelCompleted>=5&&hasPremium){
+    console.log("new level unlocked")
+}
+////## 🔵 PROJECT 8: INTERNET SPEED ADVISOR
+
+// ### Input:
+
+// - speedMbps
+
+// ### Rules:
+
+// - speed ≤0 → `"No Internet"`
+// - speed <5 → `"Very Slow"`
+// - speed 5–20 → `"Good"`
+// - speed >20 → `"Fast"`
+
+// 🧠 Twist:
+
+// Boundary values matter.
+
+let speedMbps = 113;
+if(speedMbps<=0){
+    console.log("no internet")
+}
+
+else if(speedMbps<5){
+    console.log("very slow internet")
+}
+else if(speedMbps>=5&&speedMbps<=20){
+    console.log("good internet")
+}
+
+else if(speedMbps>20){
+    console.log("very fast internet")
+}
+
+//## 🔴 PROJECT 9: BANK ACCOUNT STATE (REAL WORLD)
+
+// ### Inputs:
+
+// - balance
+// - isKYCCompleted (true/false)
+
+// ### Rules:
+
+// - KYC not completed → `"Complete KYC"`
+// - balance ≤0 → `"Account Empty"`
+// - balance <1000 → `"Low Balance"`
+// - balance ≥1000 → `"Healthy Account"`
+
+// 🧠 Twist:
+
+// KYC overrides everything.
+
+let blance =-9
+let isKYCCompleted=false;
+if (!isKYCCompleted){
+console.log("please complete kyc")
+}
+else if(blance<=0){
+   console.log("account empty") 
+}
+else if(blance<=1000){
+   console.log("account low balance") 
+}
+else if(blance>=1000){
+   console.log("healthy account balance") 
+}
+
+
+////## 🔴 PROJECT 10: GAME ATTEMPT + BAN SYSTEM (HARD)
+ //## 🔴 PROJECT 10: GAME ATTEMPT + BAN SYSTEM (HARD)
+
+// ### Inputs:
+
+// - attemptsLeft
+// - isBanned (true/false)
+
+// ### Rules:
+
+// - isBanned → `"User Banned"`
+// - attemptsLeft = 0 → `"Game Over"`
+// - attemptsLeft 1–2 → `"Last Warning"`
+// - attemptsLeft >2 → `"Keep Trying"`
+
+let attemptsLeft =3;
+let isBanned= true;
+if(isBanned){
+    console.log("user Banned")
+}
+else if(attemptsLeft==0){
+    console.log("game over")
+}
+else if(attemptsLeft>=1&&attemptsLeft<=2){
+    console.log("last warning ")
+}
+else if(attemptsLeft>2){
+    console.log("keep tryping")
+}
