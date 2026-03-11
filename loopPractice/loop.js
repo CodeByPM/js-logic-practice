@@ -191,4 +191,37 @@
 //     }
 // }console.log(countnum)
 
-              
+
+// for(let row= 1 ; row<=5;row++){
+//     let elemnt ="";
+//     for(let coln=1;coln<=5;coln++){
+//         elemnt+="*"
+//     }
+//     console.log(elemnt)
+// }
+
+
+        // for(let row = 1; row<=5;row++){
+        //     let dig ="";
+        //     for(let coln=1;coln<=5;coln++){
+        //         if(row==1||row==5){
+        //             dig+="*";
+        //         }
+        //         else if(coln==1||coln==5 || coln==3){
+        //             dig+="*";
+        //         }
+        //         else{
+        //             dig+=" ";
+        //         }
+        //     }
+        //     console.log(dig)
+        // }
+
+        // for(let row=1; row<=5;row++){
+        //     let digit = "";
+        //     for(let coln=1;coln<=(5-row+1);coln++){
+        //         digit+="*"
+        //     }
+        //     console.log(digit)
+        // }
+        
