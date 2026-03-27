@@ -11,3 +11,26 @@ for(let i=1;i<=5;i++){
     }
     console.log(digit)
 }
+
+//2 primenumber check 1 to 50
+
+for(let n = 2; n <= 50; n++){
+
+    let isPrime = true; //Assume karte hain:“ye number prime hai”
+
+    for(let i = 2; i <= Math.sqrt(n); i++){
+        if(n % i === 0){
+            isPrime = false;
+            break;
+        }
+    }
+    if(isPrime){
+        console.log(n);
+    }
+}
+// 🔥 Flow ek line me
+// number uthao (n)
+// assume karo prime hai
+// check karo koi divide karta hai kya
+// agar mil gaya → break + false
+// nahi mila → print
