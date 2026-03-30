@@ -34,3 +34,21 @@ for(let n = 2; n <= 50; n++){
 // check karo koi divide karta hai kya
 // agar mil gaya → break + false
 // nahi mila → print
+console.log("Prime numbers from 1 to 50:");
+
+for(let num = 1; num <= 50; num++) {        // 1️⃣ Outer loop: har number ke liye
+    if(num < 2) {                           // 2️⃣ 1 ko ignore
+        continue;
+    }
+    let isPrime = true;                     // 3️⃣ Maan lo prime hai
+    for(let divisor = 2; divisor < num; divisor++) { // 4️⃣ Check potential divisors
+        if(num % divisor === 0) {           // 5️⃣ Agar divisible mil gaya
+            isPrime = false;                //    → prime nahi
+            break;                          //    → aur check karna band
+        }
+    }
+    if(isPrime) {                           // 6️⃣ Agar prime flag still true
+        console.log(num);                   //    → print karo
+    }
+}
+
