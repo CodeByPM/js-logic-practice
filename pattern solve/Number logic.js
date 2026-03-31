@@ -53,5 +53,26 @@ for(let num = 1; num <= 50; num++) {        // 1️⃣ Outer loop: har number ke
 }
 
 
-//Q13. Perfect Numbers between 1-100
+// //Q13. Perfect Numbers between 1-100
 
+for(let num=1;num<100;num++){
+    let sum=0;
+    for(let divisor=1;divisor<num;divisor++){
+if(num%divisor===0){
+    sum=sum+divisor
+}
+    }
+    if(sum===num){
+        console.log(sum)
+    }
+}
+// 📝 PEN-PAPER ALGORITHM
+// Har number n = 1 to 100 ke liye:
+
+// Sum variable = 0
+
+// Loop divisor = 1 se n-1 tak
+
+// Agar n divisor se divide hota hai (n % divisor == 0) → sum += divisor
+
+// Loop end hone ke baad, agar sum == n → print n
