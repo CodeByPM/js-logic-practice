@@ -52,3 +52,6 @@ for(let num = 1; num <= 50; num++) {        // 1️⃣ Outer loop: har number ke
     }
 }
 
+
+//Q13. Perfect Numbers between 1-100
+

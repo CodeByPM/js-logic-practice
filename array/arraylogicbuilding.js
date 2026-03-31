@@ -29,3 +29,11 @@ for(let i=rev.length-1; i>=0;i--){
    ulta.push(rev[i])
 }
 console.log(ulta)
+
+// problem  4 sum of array
+let su=[45,78,89,48,56,99]
+let sums=0;
+for(let i=0;i<su.length;i++){// i =0 se start hota hai maine i=1 se kiya tha jise 0 index pe jo element hota skip ho jata
+sums=sums+su[i] // yaha maine ek aur galti kiya maine direct su varible ko assign kardiya tha jise mujhse uske tha i index bhi likha na chahiye tha
+}
+console.log(sums)
