@@ -76,3 +76,37 @@ if(num%divisor===0){
 // Agar n divisor se divide hota hai (n % divisor == 0) → sum += divisor
 
 // Loop end hone ke baad, agar sum == n → print n
+
+// Q14 amstrong number  check 
+////////////////////////////////////////////////////////////////         1 april 2026 //////////////////////////////////////////
+let num=153
+let orignal=num // maine yaha mistake kiya tha ki maine num copy nahi kiya tha jise value compare nahi ho raha tha kyuki 0<153 nahi hoga 
+let sum=0
+while(num>0){
+    let digit=(num%10) // ye digit nikalega num se right to left chalta hai
+    let cube=(digit*digit*digit) // yaha pe cube hoga
+    sum=sum+cube// yaha pe jo bhi cube hua hoga add hoga sum variavle me
+    num=Math.floor(num/10) // ye last digit remove kaega num se
+}
+if(orignal==sum){ // check kar rahe hai ki ye amstrong number hai ki nahi
+    console.log( orignal+ "  is amsteong")
+}
+else{
+    console.log(orignal +"not amstrong number")
+}
+//Q14. Armstrong Numbers between 1-1000
+for(let num=1;num<1000;num++){
+let orignal=num // maine yaha mistake kiya tha ki maine num copy nahi kiya tha jise value compare nahi ho raha tha kyuki 0<153 nahi hoga 
+let temp=num //Digit extract karne ke liye ek copy variable 
+let sum=0
+while(temp>0){
+    let digit=(temp%10) // ye digit nikalega num se right to left chalta hai
+    let cube=(digit*digit*digit) // yaha pe cube hoga
+    sum=sum+cube// yaha pe jo bhi cube hua hoga add hoga sum variavle me
+    temp=Math.floor(temp/10) // ye last digit remove kaega num se
+}
+if(orignal==sum){ // check kar rahe hai ki ye amstrong number hai ki nahi
+    console.log( orignal+ "  is amsteong")
+}
+
+}
