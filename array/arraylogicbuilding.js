@@ -37,3 +37,14 @@ for(let i=0;i<su.length;i++){// i =0 se start hota hai maine i=1 se kiya tha jis
 sums=sums+su[i] // yaha maine ek aur galti kiya maine direct su varible ko assign kardiya tha jise mujhse uske tha i index bhi likha na chahiye tha
 }
 console.log(sums)
+
+//Q5: Find Smallest in Array
+let arr=[45, 12, 78, 3, 56]
+let min=arr[0] //smallest variable mein array ka pehla element daalo
+
+for(let i=1;i<arr.length;i++){//Loop chalao i = 1 se array.length-1 tak
+    if(arr[i]<min){//Har iteration mein check karo: kya array[i] < smallest?
+        min=arr[i]//Agar haan, to smallest = array[i]
+    }
+}
+console.log(min)
