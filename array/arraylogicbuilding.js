@@ -48,3 +48,35 @@ for(let i=1;i<arr.length;i++){//Loop chalao i = 1 se array.length-1 tak
     }
 }
 console.log(min)
+
+//Q6: Count Even Numbers in 
+let arraynew= [1, 2, 3, 4, 5, 6, 7, 8]
+let count=0
+for(let i=0;i<arraynew.length;i++){
+    if(arraynew[i]%2==0){
+        count++
+       
+    }
+} console.log(count)
+
+//Q7: Check Element Exists
+// Task: Array me diya hua element exist karta hai ya nahi, check karo.
+// Input: [10, 20, 30, 40], search: 30
+// Output: true
+// Input: [10, 20, 30, 40], search: 50
+// Output: false
+let checkArray=[10,20,30,40]
+let searchelsement=70
+let fount=false
+for(let i=0;i<checkArray.length;i++){
+    if(checkArray[i]===searchelsement){
+        fount=true
+        break;
+    }
+}
+if(fount==true){
+    console.log(true +" element exits")
+}
+else{
+    console.log(false+" not found")
+}
