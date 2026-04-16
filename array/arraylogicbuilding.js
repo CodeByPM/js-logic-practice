@@ -80,3 +80,32 @@ if(fount==true){
 else{
     console.log(false+" not found")
 }
+
+//Q8: Find Index of Element
+// Task: Element ka index nikalo
+// Input: [10, 20, 30, 40, 50], search: 30
+// Output: 2
+
+let rray=[10,20,30,40]
+let searchElsement=30
+for(let i=0;i<rray.length;i++){
+    if(rray[i]===searchElsement){
+        console.log(i)
+    }
+}
+// Input: [10, 20, 30], search: 100
+// Output: -1 (not found)
+let arrayR=[10,20,30,40]
+let searchElsements=40
+let indexs=-1//-1 ka matlab "not found" — ye ek common convention hai programming mein//Array index hamesha 0,1,2,3... hote hain
+for(let i=0;i<arrayR.length;i++){
+    if(arrayR[i]==searchElsements){
+        indexs=i//Haan! To yaad rakhlo ki ye i index pe mila
+    }
+}
+if(indexs!==-1){
+    console.log("found at index",indexs)
+}
+else{
+    console.log("element not found")
+}
